@@ -33,4 +33,3 @@ export const productService = {
     return response.data;
   }
 };
-

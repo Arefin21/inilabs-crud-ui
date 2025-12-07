@@ -150,4 +150,3 @@ onMounted(() => {
   loadProduct();
 });
 </script>
-

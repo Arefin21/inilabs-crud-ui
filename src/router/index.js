@@ -23,6 +23,16 @@ const routes = [
         path: '',
         name: 'Products',
         component: () => import('../pages/Products/Index.vue')
+      },
+      {
+        path: 'products/create',
+        name: 'ProductCreate',
+        component: () => import('../pages/Products/Create.vue')
+      },
+      {
+        path: 'products/:id/edit',
+        name: 'ProductEdit',
+        component: () => import('../pages/Products/Edit.vue')
       }
     ]
   }
@@ -33,7 +43,7 @@ const router = createRouter({
   routes
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, fro, next) => {
   const authStore = useAuthStore();
 
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
