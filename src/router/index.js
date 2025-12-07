@@ -23,16 +23,6 @@ const routes = [
         path: '',
         name: 'Products',
         component: () => import('../pages/Products/Index.vue')
-      },
-      {
-        path: 'products/create',
-        name: 'ProductCreate',
-        component: () => import('../pages/Products/Create.vue')
-      },
-      {
-        path: 'products/:id/edit',
-        name: 'ProductEdit',
-        component: () => import('../pages/Products/Edit.vue')
       }
     ]
   }
@@ -56,4 +46,3 @@ router.beforeEach((to, from, next) => {
 });
 
 export default router;
-

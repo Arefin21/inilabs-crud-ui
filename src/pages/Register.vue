@@ -117,4 +117,3 @@ const handleRegister = async () => {
   }
 };
 </script>
-

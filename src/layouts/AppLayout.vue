@@ -37,4 +37,3 @@ const handleLogout = async () => {
   router.push({ name: 'Login' });
 };
 </script>
-
