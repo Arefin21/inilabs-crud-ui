@@ -148,7 +148,7 @@ const loading = ref(false);
 const meta = ref({
   current_page: 1,
   last_page: 1,
-  per_page: 15,
+  per_page: 2,
   total: 0
 });
 
@@ -156,7 +156,7 @@ const filters = ref({
   search: '',
   sort_by: 'id',
   sort_order: 'desc',
-  per_page: 15
+  per_page: 2
 });
 
 let searchTimeout = null;
@@ -174,7 +174,8 @@ const loadProducts = async () => {
   try {
     const response = await productService.getAll({
       ...filters.value,
-      per_page: filters.value.per_page
+      per_page: filters.value.per_page,
+      page: meta.value.current_page
     });
     products.value = response.data;
     meta.value = response.meta;
